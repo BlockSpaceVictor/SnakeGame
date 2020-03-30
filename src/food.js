@@ -2,8 +2,9 @@ export default class Food {
 
 
 	constructor(game){
-		this.width = 10;
-		this.height = 10;
+		this.size = this.getRandomInt(10, 30);
+		this.width = this.size;
+		this.height = this.size;
 		this.gameWidth = game.gameWidth;
 		this.gameHeight = game.gameHeight;
 		this.position = {

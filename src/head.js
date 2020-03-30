@@ -5,10 +5,10 @@ export default class Head {
 
 	constructor(game){
 		this.game = game;
-		this.width = 20;
-		this.height = 20;
-		this.maxSpeed = 2;
-		this.speed =2;
+		this.width = 25;
+		this.height = 25;
+		this.maxSpeed = 4;
+		this.speed =0;
 		this.updown = 0;
 		this.gameWidth = game.gameWidth;
 		this.gameHeight = game.gameHeight;
@@ -21,7 +21,6 @@ export default class Head {
 	update(deltaTime){
 		this.position.x += this.speed;
 		this.position.y += this.updown;
-		console.log(this.position.x, this.position.y);
 
 		//edge collisions:
 		if (this.position.x < 0) this.position.x = 0;
